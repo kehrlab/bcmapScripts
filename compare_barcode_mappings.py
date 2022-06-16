@@ -126,6 +126,10 @@ def compare(bcmap_mappings,lrsim_mappings,res):
 
 if len(sys.argv)!=3:
     print('usage: compare_barcode_mappings.py res_sim.bed res_bcmap.bed')
+    print('')
+    print('Compare barcode mappings in bed format to a truth set.')
+    print('Generate the truthset using the script cluster_LRSIM.py.')
+    print('Make sure that all input files are ordered by barcode.')
     exit()
 
 sim_res=open(sys.argv[1],'r')
