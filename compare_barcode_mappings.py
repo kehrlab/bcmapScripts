@@ -1,3 +1,7 @@
+# compare barcode mappings in bed format to a truth set
+# generate the truthset using the script cluster_LRSIM.py
+# Make sure that all input files are ordered by barcode
+
 import sys
 import numpy as np
 import math
