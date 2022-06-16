@@ -35,6 +35,11 @@ def getreadbarcode(line):
 
 if len(sys.argv)!=3:
     print('usage: cluster_LRSIM.py sim_readfile1.fq outputfile.bed')
+    print('')
+    print('Read data simulated with LRSIM has to be barcode trimmed and sorted with bcctools.')
+    print('Then use this script to cluster the corrected fastq files into a barcode mapping bed file serving as a truth set.')
+    print('Remove unidentified barcodes marked by a * (manually)')
+    print('Compare barcode mappings to the truth set using the script: "compare_barcode_mappings.py".')
     exit()
 
 # define the number of lines to read
@@ -67,7 +72,7 @@ with open(sys.argv[1],'r') as input_file:
                         if len(mappings)>10000:
                             outputfile.write(mappings)
                             mappings=''
-                    map=mapping(pos)
+-                    map=mapping(pos)
             else:
                 if abs(int(map.end)-int(map.start))>min_len:
                     mappings+=map.chr+'\t'+map.start+'\t'+map.end+'\t'+old_barcode+'\n'
