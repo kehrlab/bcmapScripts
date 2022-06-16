@@ -1,3 +1,6 @@
+# cluster alignemnt data in SAM format into barcode mappings
+# the input file has to be sorted by barcode
+
 import sys
 from itertools import islice
 
