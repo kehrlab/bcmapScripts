@@ -121,7 +121,7 @@ def compare(bcmap_mappings,lrsim_mappings,res):
     return res
 
 if len(sys.argv)!=3:
-    print('usage: compare_bcmap2.py res_sim.bed res_bcmap.bed')
+    print('usage: compare_barcode_mappings.py res_sim.bed res_bcmap.bed')
     exit()
 
 sim_res=open(sys.argv[1],'r')
@@ -133,7 +133,7 @@ lrsim_mappings=[lrsim_mapping]
 res=result()
 
 if bcmap_mapping.barcode!=lrsim_mapping.barcode:
-    print('ERROR! HELP ME!')
+    print('ERROR! Remove barcode mappings containing the * barcode and make sure your input files are ordered by barcode')
 else:
     barcode=bcmap_mapping.barcode
 
