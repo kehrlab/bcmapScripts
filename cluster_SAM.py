@@ -62,6 +62,9 @@ def getreadbarcode(line):
 
 if len(sys.argv)!=4:
     print('usage: cluster_SAM.py sim_readfile1.fq alignment.sam outputfile.bed')
+    print('')
+    print('Cluster alignemnt data in SAM format into barcode mappings')
+    print('The input file has to be sorted by barcode')
     exit()
 
 # define the number of lines to read
