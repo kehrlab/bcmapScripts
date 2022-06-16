@@ -1,3 +1,8 @@
+# Read data simulated with LRSIM has to be barcode trimmed and sorted with bcctools.
+# Use this script to cluster the corrected fastq files into a barcode mapping bed file serving as a truth set.
+# remove unidentified barcodes marked by a * (manually)
+# Compare barcode mappings to the truth set using the script: "compare_barcode_mappings.py".
+
 import sys
 from itertools import islice
 
